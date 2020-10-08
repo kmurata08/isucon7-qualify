@@ -331,7 +331,9 @@ func postMessage(c echo.Context) error {
 		return err
 	}
 
-	message := c.FormValue("message")
+	// あとで戻す
+	//message := c.FormValue("message")
+	message := c.FormValue("invalid")
 	if message == "" {
 		return echo.ErrForbidden
 	}
